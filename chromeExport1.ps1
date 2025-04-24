@@ -1,5 +1,5 @@
 $Regex = '(htt(p|s))://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)*?'
-$Value = Get-Content -Path "$Env:systemdrive\Users\swilson\AppData\Local\Google\Chrome\User Data\Default\History"|Select-String -AllMatches $regex |% {($_.Matches).Value} |Sort -Unique
+$Value = Get-Content -Path "$Env:systemdrive\Users\dholter\AppData\Local\Google\Chrome\User Data\Default\History"|Select-String -AllMatches $regex |% {($_.Matches).Value} |Sort -Unique
 
 $Results = @()
 $Value | ForEach-Object {
@@ -14,4 +14,4 @@ $Value | ForEach-Object {
     }
 }
 
-$Results | Export-Csv -Path "C:\temp\BrightFlow\ChromeHistoy.csv" -NoTypeInformation
+$Results | Export-Csv -Path "C:\temp\BrightFlow\ChromeHistory.csv" -NoTypeInformation
