@@ -14,4 +14,4 @@ $Value | ForEach-Object {
     }
 }
 
-$Results | Export-Csv -Path "C:\ChromeHistoy.csv" -NoTypeInformation
+$Results | Export-Csv -Path "C:\temp\BrightFlow\ChromeHistoy.csv" -NoTypeInformation
